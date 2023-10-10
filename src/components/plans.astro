@@ -1,0 +1,68 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Seguro de ",
+    price: " Mascotas ",
+    popular: false,
+    features: [
+      "Gastos Médicos por Accidentes",
+      "Ayuda Gastos Funerarios",
+      "Robo con Violencia Mascotas",
+      "Asistencia Veterinaria Telefónica",
+      "Desparasitación",
+      "Vacuna Antirrábica",
+    ],
+  },
+  {
+    name: "Seguro de ",
+    price: "Vida",
+
+    popular: true,
+    features: [
+      "Fallecimiento",
+      "Asistencia Funeraria",
+      "Renta Diaria Hospitalaria",
+      "Protección Financiera para la Familia",
+      "Herencia Planificada",
+      "Paz Mental",
+    ],
+  },
+  {
+    name: "Seguro de ",
+    price: "Autos",
+    popular: false,
+    features: [
+      "Daños Materiales",
+      "Robo total",
+      "Gastos médicos a ocupantes",
+      "Asistencia vial",
+      "Asistencia legal",
+      "Responsabilidad civil a terceros",
+    ],
+  },
+];
+---
+
+<Container>
+  <Sectionhead>
+    <Fragment slot="title">Planes</Fragment>
+  </Sectionhead>
+
+  <div class="grid sm:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+
+  <div class="grid place-content-center mt-5">
+    <a
+      type="button"
+      href="/contact"
+      class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-medium px-6 py-3.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 text-center"
+    >
+      Quiero contratar un plan
+    </a>
+  </div>
+</Container>

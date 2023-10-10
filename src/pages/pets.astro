@@ -3,43 +3,44 @@
 // @ts-ignore
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
-import logovImage from "assets/logov.png";
+import logomasImage from "assets/logomas.png";
 import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
 
 const features = [
   {
-    title: "Fallecimiento",
+    title: "Gastos Médicos por Accidentes y Enfermedades",
     description:
       "En caso de un evento inesperado, como un accidente, una enfermedad grave, el seguro puede cubrir los costos asociados, evitando una carga financiera significativa para el asegurado..",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "Asistencia Funeraria",
+    title: "Ayuda Gastos Funerarios / Fallecimiento",
     description:
       " Saber que estás protegido por un seguro te brinda paz mental. No tendrás que preocuparte constantemente por lo que podría suceder en el futuro.",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "Renta Diaria Hospitalaria por Enfermedad, Accidente y Covid19",
+    title: "Robo con Violencia Mascotas",
     description:
       " El seguro de salud proporciona acceso a atención médica de calidad y ayuda a cubrir los costos médicos, incluidas consultas, hospitalizaciones y medicamentos.  ",
     icon: "bx:bxs-data",
   },
   {
-    title: "Protección Financiera para la Familia",
+    title: "Asistencia Veterinaria Telefónica",
     description:
       " El seguro de viaje ofrece cobertura en caso de emergencias médicas, cancelación de viajes, pérdida de equipaje y otros inconvenientes que pueden ocurrir durante un viaje.",
     icon: "bx:bxs-bot",
   },
   {
-    title: "Herencia Planificada",
+    title: "Desparasitación",
     description:
       "El seguro de vida y el seguro de invalidez proporcionan apoyo financiero a tus seres queridos en caso de tu fallecimiento o incapacidad, lo que les permite mantener su calidad de vida. ",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Paz Mental",
+    title: "Vacuna Antirrábica",
     description:
       "Al tener seguro, puedes incorporar la protección de seguros en tu planificación financiera a largo plazo. Esto puede ayudarte a alcanzar metas financieras.",
     icon: "bx:bxs-user",
@@ -47,48 +48,48 @@ const features = [
 ];
 ---
 
-<Layout title="Seguro de vida">
+<Layout title="mascotas">
     <Container>
 
-      <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={logovImage}
-      alt="pets"
-      widths={[300, 400, 600]}
-      aspectRatio="4:3"
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
-  <div>
-    <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter hover:text-blue-900">
-      Tu tranquilidad es lo mas importante
-    </h1>
-    <div class="grid place-content-center mt-5">
-      <a
-        type="button"
-        href="/contact"
-        class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-medium px-6 py-3.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 text-center"
-      >
-        Quiero contratar un plan
-      </a>
-    </div>
-    
-  </div>
-
+ 
+<main
+class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+<div class="py-6 md:order-1 hidden md:block">
+  <Picture
+    src={logomasImage}
+    alt="Astronaut in the air"
+    widths={[200, 400, 600]}
+    aspectRatio="4:3"
+    sizes="(max-width: 800px) 100vw, 620px"
+    loading="eager"
+    format="avif"
+  />
+</div>
+<div>
+  <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter transition-colors duration-500 ease-in-out hover:text-blue-900">
+    Mascotas
+  </h1>
   
-
+ 
+  <div class="grid place-content-center mt-5">
+    <a
+      type="button"
+      href="/contact"
+      class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-medium px-6 py-3.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 text-center"
+    >
+      Quiero contratar un plan
+    </a>
+  </div>
+</div>
 </main>
+
 
 
 
       <div class="mt-16 md:mt-0">
     
         <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight xl:tracking-tighter transition-colors duration-500 ease-in-out hover:text-blue-900 text-center">
-          Seguro de Vida
+          Seguro de mascotas
         </h2>
     
     
